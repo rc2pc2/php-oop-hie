@@ -8,14 +8,14 @@ class LivingBeing{
     }
 
     public function getAge(){
-        return $this->dateOfBirth->diff(new DateTime('now'))->format('%y years, %m months');
+        return intval($this->dateOfBirth->diff(new DateTime('now'))->format('%y'));
     }
 
     public function breathe(){
         return ' breathing...';
     }
 
-    public function eat(){
+    protected function eat(){
         return ' eating...';
     }
 
